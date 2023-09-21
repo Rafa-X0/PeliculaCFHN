@@ -11,33 +11,33 @@ build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = PeliculasCFHN.ClienteBlazor
 build_property.RootNamespace = PeliculasCFHN.ClienteBlazor
-build_property.ProjectDir = C:\Users\MINEDUCYT\Desktop\PeliculasCFHN.ClienteBlazor\PeliculasCFHN.ClienteBlazor\
+build_property.ProjectDir = C:\Users\Fernando Hernández\Desktop\WEb-API\PeliculaCFHN\PeliculasCFHN.ClienteBlazor\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\MINEDUCYT\Desktop\PeliculasCFHN.ClienteBlazor\PeliculasCFHN.ClienteBlazor
+build_property.MSBuildProjectDirectory = C:\Users\Fernando Hernández\Desktop\WEb-API\PeliculaCFHN\PeliculasCFHN.ClienteBlazor
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/MINEDUCYT/Desktop/PeliculasCFHN.ClienteBlazor/PeliculasCFHN.ClienteBlazor/App.razor]
+[C:/Users/Fernando Hernández/Desktop/WEb-API/PeliculaCFHN/PeliculasCFHN.ClienteBlazor/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MINEDUCYT/Desktop/PeliculasCFHN.ClienteBlazor/PeliculasCFHN.ClienteBlazor/Pages/Index.razor]
+[C:/Users/Fernando Hernández/Desktop/WEb-API/PeliculaCFHN/PeliculasCFHN.ClienteBlazor/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MINEDUCYT/Desktop/PeliculasCFHN.ClienteBlazor/PeliculasCFHN.ClienteBlazor/Shared/SurveyPrompt.razor]
+[C:/Users/Fernando Hernández/Desktop/WEb-API/PeliculaCFHN/PeliculasCFHN.ClienteBlazor/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MINEDUCYT/Desktop/PeliculasCFHN.ClienteBlazor/PeliculasCFHN.ClienteBlazor/_Imports.razor]
+[C:/Users/Fernando Hernández/Desktop/WEb-API/PeliculaCFHN/PeliculasCFHN.ClienteBlazor/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MINEDUCYT/Desktop/PeliculasCFHN.ClienteBlazor/PeliculasCFHN.ClienteBlazor/Shared/MainLayout.razor]
+[C:/Users/Fernando Hernández/Desktop/WEb-API/PeliculaCFHN/PeliculasCFHN.ClienteBlazor/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ysxgah6eyp
 
-[C:/Users/MINEDUCYT/Desktop/PeliculasCFHN.ClienteBlazor/PeliculasCFHN.ClienteBlazor/Shared/NavMenu.razor]
+[C:/Users/Fernando Hernández/Desktop/WEb-API/PeliculaCFHN/PeliculasCFHN.ClienteBlazor/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-yfq0q5p4j4
