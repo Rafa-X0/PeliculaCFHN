@@ -1,0 +1,46 @@
+﻿
+@page "/directores"
+@using Models
+@using Services
+@inject IDirectorService DirectorService
+
+<MudText Typo="Typo.h4">Directores</MudText>
+
+@if(directores == null)
+{
+    <p>Cargando..............</p>
+}
+else
+{
+    <MudGrid>
+        @foreach(var item in directores)
+        {
+            <MudItem xs="12" sm="10" md="6" lg="4">
+                @*agregado desde la app de css*@
+                <MudCard class="fixed-card">
+                    <MudCardHeader Class="blue lighten-1">
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.h6">@item.Nombre</MudText>
+                            <MudText Typo="Typo.h6">@item.Apellido</MudText>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudText Typo="Typo.body2">@item.FechaNacimiento</MudText>
+                        <MudText Typo="Typo.body2">@item.Nacionalidad</MudText>
+                    </MudCardContent>
+                    <MudCardActions Class="center">
+                        <img src="@item.Imagen" alt="@item.Nombre" Elevation="25" class="rounded-lg align-center" width="60%" height="200%" />
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+        }
+    </MudGrid>
+}
+
+@code {
+    IEnumerable<Director> directores = new List<Director>();
+    protected override async Task OnInitializedAsync()
+    {
+        directores  = await DirectorService.GetAll();
+    }
+}
