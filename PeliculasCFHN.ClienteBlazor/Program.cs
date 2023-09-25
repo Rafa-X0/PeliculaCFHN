@@ -13,7 +13,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https:/
 
 builder.Services.AddScoped<IGeneroService, GeneroService>();
 builder.Services.AddScoped<IDirectorService, DirectorService>();
-//builder.Services.AddScoped<IPeliculaService, PeliculaService>();
+builder.Services.AddScoped<IPeliculaService, PeliculaService>();
 
 builder.Services.AddMudServices();  //importacin de los servicios de MudBlazor
 

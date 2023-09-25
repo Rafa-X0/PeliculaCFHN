@@ -1,0 +1,43 @@
+﻿
+@page "/detalles/{id:int}"
+@using  Models
+@using Services
+@inject IPeliculaService PeliculaService
+
+<MudText Typo="Typo.h5">Detalles de peliculas</MudText>
+<br />
+<br />
+<MudCardActions>
+    <MudButton Link="@($"/peliculas")" Variant="Variant.Filled" Color="Color.Primary">Regresar</MudButton>
+</MudCardActions>
+<br />
+@if(pelicula == null)
+{
+    <p>Cargando.............</p>
+}
+else
+{
+    <MudCard>
+        <MudCardContent>
+            <img src="@pelicula.Imagen" alt="Portada de la película" width=100%/>
+            <MudText Variant="Typo.h6"><b>Título:</b> @pelicula.Titulo</MudText>
+            <MudDivider Margin="Margin.Vertical" />
+            <MudText Variant="Typo.body2"><b>Fecha de Estreno:</b> @pelicula.FechaEstreno</MudText>
+            <MudText Variant="Typo.body2"><b> Actores:</b> @pelicula.Actores</MudText>
+            <MudText Variant="Typo.body1"><b>Descripción:</b> @pelicula.Descripcion</MudText>
+        </MudCardContent>
+    </MudCard>
+}
+
+@code{
+    [Parameter]
+    public int id { get; set; }
+
+    Pelicula pelicula = new Pelicula();
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (id > 0)
+            pelicula = await PeliculaService.GetById(id);
+    }
+}

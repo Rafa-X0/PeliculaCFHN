@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/MINEDUCYT/Desktop/PeliculasCFHN.ClienteBlazor/PeliculasCFHN.ClienteBlazor/Pages/Detalles.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWxsZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MINEDUCYT/Desktop/PeliculasCFHN.ClienteBlazor/PeliculasCFHN.ClienteBlazor/Pages/Directores.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlyZWN0b3Jlcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,6 +36,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/MINEDUCYT/Desktop/PeliculasCFHN.ClienteBlazor/PeliculasCFHN.ClienteBlazor/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MINEDUCYT/Desktop/PeliculasCFHN.ClienteBlazor/PeliculasCFHN.ClienteBlazor/Pages/Peliculas.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsaWN1bGFzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MINEDUCYT/Desktop/PeliculasCFHN.ClienteBlazor/PeliculasCFHN.ClienteBlazor/Pages/PeliculasPorGenero.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsaWN1bGFzUG9yR2VuZXJvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/MINEDUCYT/Desktop/PeliculasCFHN.ClienteBlazor/PeliculasCFHN.ClienteBlazor/Shared/SurveyPrompt.razor]

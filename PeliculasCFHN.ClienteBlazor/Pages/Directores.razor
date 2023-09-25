@@ -17,7 +17,7 @@ else
         {
             <MudItem xs="12" sm="10" md="6" lg="4">
                 @*agregado desde la app de css*@
-                <MudCard class="fixed-card">
+                <MudCard Width="100%" Height="100%">
                     <MudCardHeader Class="blue lighten-1">
                         <CardHeaderContent>
                             <MudText Typo="Typo.h6">@item.Nombre</MudText>
@@ -29,7 +29,7 @@ else
                         <MudText Typo="Typo.body2">@item.Nacionalidad</MudText>
                     </MudCardContent>
                     <MudCardActions Class="center">
-                        <img src="@item.Imagen" alt="@item.Nombre" Elevation="25" class="rounded-lg align-center" width="60%" height="200%" />
+                        <img src="@item.Imagen" alt="@item.Nombre" Elevation="25" class="rounded-lg" width="60%" height="auto" />
                     </MudCardActions>
                 </MudCard>
             </MudItem>

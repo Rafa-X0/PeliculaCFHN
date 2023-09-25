@@ -1,0 +1,40 @@
+﻿
+@page "/peliculas"
+@using  Models
+@using Services
+@inject IPeliculaService PeliculaService
+
+<MudText Typo="Typo.h4">Peliculas</MudText>
+
+@if(peliculas == null)
+{
+    <p>Cargando......</p>
+}
+else
+{
+    <MudGrid>
+        @foreach (var item in peliculas)
+        {
+            <MudItem xs="12" sm="10" md="6" lg="4">
+                <MudCard Width="100%" Height="100%">
+                    <MudCardContent >
+                        <img src="@item.Imagen" alt="Portada de @item.Titulo"  Elevation="25" class="rounded-lg" width="60%" height="auto">
+                        <MudText Variant="Typo.h6"><b>@item.Titulo</b></MudText>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Link="@($"/detalles/{item.Id}")" Variant="Variant.Filled" Color="Color.Primary">Detalles</MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>           
+        }
+    </MudGrid>
+}
+
+@code {
+    IEnumerable<Pelicula> peliculas = new List<Pelicula>();
+    protected override async Task OnInitializedAsync()
+    {
+        peliculas = await PeliculaService.GetAll();
+    }
+}
+

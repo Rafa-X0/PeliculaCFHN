@@ -1,0 +1,55 @@
+﻿
+@page "/pelxgenero/{id:int}"
+@using Models
+@using Services
+@inject IPeliculaService PeliculaService
+
+<MudText Typo="Typo.h4">Peliculas por Género</MudText>
+<MudCardActions>
+    <MudButton Link="@($"/generos")" Variant="Variant.Filled" Color="Color.Primary">Regresar</MudButton>
+</MudCardActions>
+
+@if (peliculas == null)
+{
+    <p>Cargando...</p>
+}
+else
+{
+    <MudGrid>
+        @foreach (var item in peliculas)
+        {
+            <MudItem xs="12" sm="10" md="6" lg="4">
+                <MudCard Width="100%" Height="100%">
+                    <MudCardHeader Class="blue lighten-1">
+                        <CardHeaderContent>
+                            <MudCardActions class="center">
+                                <img src="@item.Imagen" alt="@item.Titulo" Elevation="25" class="rounded-lg" width="60%" height="auto" />
+                            </MudCardActions>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudText Typo="Typo.h6">@item.Titulo</MudText>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Link="@($"/detalles/{item.Id}")" Variant="Variant.Outlined" Color="Color.Success">Detalles</MudButton>
+                    </MudCardActions>
+                    
+                </MudCard>
+            </MudItem>
+            
+        }
+    </MudGrid>
+}
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+
+    IEnumerable<Pelicula> peliculas = new List<Pelicula>();
+    protected override async Task OnInitializedAsync()
+    {
+        if (id > 0)
+            peliculas = await PeliculaService.GetByGenero(id);
+            peliculas = await PeliculaService.GetByDirector(id);
+    }
+}
