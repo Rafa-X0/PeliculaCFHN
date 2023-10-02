@@ -6,11 +6,12 @@
 
 <MudText Typo="Typo.h5">Detalles de peliculas</MudText>
 <br />
-<br />
-<MudCardActions>
-    <MudButton Link="@($"/peliculas")" Variant="Variant.Filled" Color="Color.Primary">Regresar</MudButton>
+
+@*<MudCardActions>
+    <MudButton Link="@($"/generos")" Variant="Variant.Filled" Color="Color.Primary">Regresar</MudButton>
 </MudCardActions>
-<br />
+<br />*@
+
 @if(pelicula == null)
 {
     <p>Cargando.............</p>
@@ -19,7 +20,7 @@ else
 {
     <MudCard>
         <MudCardContent>
-            <img src="@pelicula.Imagen" alt="Portada de la película" width=100%/>
+            <img src="@pelicula.Imagen" alt="Portada de la película" width=100% height="900"/>
             <MudText Variant="Typo.h6"><b>Título:</b> @pelicula.Titulo</MudText>
             <MudDivider Margin="Margin.Vertical" />
             <MudText Variant="Typo.body2"><b>Fecha de Estreno:</b> @pelicula.FechaEstreno</MudText>

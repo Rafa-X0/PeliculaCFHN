@@ -5,9 +5,12 @@
 @inject IPeliculaService PeliculaService
 
 <MudText Typo="Typo.h4">Peliculas por Género</MudText>
+<br />
+
 <MudCardActions>
     <MudButton Link="@($"/generos")" Variant="Variant.Filled" Color="Color.Primary">Regresar</MudButton>
 </MudCardActions>
+<br />
 
 @if (peliculas == null)
 {
@@ -19,24 +22,24 @@ else
         @foreach (var item in peliculas)
         {
             <MudItem xs="12" sm="10" md="6" lg="4">
-                <MudCard Width="100%" Height="100%">
+                <MudCard Width="85%" Height="100%" Class="d-flex flex-column">
                     <MudCardHeader Class="blue lighten-1">
                         <CardHeaderContent>
                             <MudCardActions class="center">
-                                <img src="@item.Imagen" alt="@item.Titulo" Elevation="25" class="rounded-lg" width="60%" height="auto" />
+                                <img src="@item.Imagen" alt="@item.Titulo" Elevation="25" class="rounded-lg" width="100%" height="300" />
                             </MudCardActions>
                         </CardHeaderContent>
                     </MudCardHeader>
                     <MudCardContent>
                         <MudText Typo="Typo.h6">@item.Titulo</MudText>
                     </MudCardContent>
-                    <MudCardActions>
-                        <MudButton Link="@($"/detalles/{item.Id}")" Variant="Variant.Outlined" Color="Color.Success">Detalles</MudButton>
-                    </MudCardActions>
-                    
+                    <div class="mt-auto text-center">
+                        <MudCardActions>
+                            <MudButton Link="@($"/detalles/{item.Id}")" Variant="Variant.Outlined" Color="Color.Success">Detalles</MudButton>
+                        </MudCardActions>
+                    </div>
                 </MudCard>
             </MudItem>
-            
         }
     </MudGrid>
 }
@@ -50,6 +53,6 @@ else
     {
         if (id > 0)
             peliculas = await PeliculaService.GetByGenero(id);
-            peliculas = await PeliculaService.GetByDirector(id);
+            //peliculas = await PeliculaService.GetByDirector(id);
     }
 }
