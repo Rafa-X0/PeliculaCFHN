@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xLF4Vj/rPmdlA+ynqmo3LW6i+X7IxlN0Z7JU6GYhqvI=",
+  "Hash": "5EzVQ3+Qa1+JlBDyvdhkG9wPz2nfFsK7IMquCXrl+WQ=",
   "Source": "PeliculasCFHN.ClienteBlazor",
   "BasePath": "/",
   "Mode": "Root",
@@ -7257,6 +7257,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\icon-512.png"
+    },
+    {
+      "Identity": "C:\\Users\\MINEDUCYT\\Desktop\\PeliculasCFHN.ClienteBlazor\\PeliculasCFHN.ClienteBlazor\\wwwroot\\images\\logo.png",
+      "SourceId": "PeliculasCFHN.ClienteBlazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MINEDUCYT\\Desktop\\PeliculasCFHN.ClienteBlazor\\PeliculasCFHN.ClienteBlazor\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
       "Identity": "C:\\Users\\MINEDUCYT\\Desktop\\PeliculasCFHN.ClienteBlazor\\PeliculasCFHN.ClienteBlazor\\wwwroot\\images\\QuéCors.png",
