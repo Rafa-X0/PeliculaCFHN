@@ -199,13 +199,13 @@
       "mscorlib.dll": "sha256-tSv6NEbBsHuM5P3AUJGybafS0hxrXlzDmmcyG2eGk3I=",
       "netstandard.dll": "sha256-klcvWVyHimPfDxg6W1A076EKpCB5ySxjtc7sxJEsGgE=",
       "System.Private.CoreLib.dll": "sha256-Y8kdbfPQ0YoYLGbOgzRmoVsnuMYNlA1hvLvDWFTtzrk=",
-      "PeliculasCFHN.ClienteBlazor.dll": "sha256-aBAntZoDoEBDf0odMEEtlGPU0DSwhcJK4zL\/ghPWzcA="
+      "PeliculasCFHN.ClienteBlazor.dll": "sha256-bUX5X5Oa10k6IO5O921tBnXYpF08bvRhLFXIL0tBy7Q="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "PeliculasCFHN.ClienteBlazor.pdb": "sha256-8CpmyiHGpuIwf3BpDIWOs0m3BPBVLZc1VLZVI2W7wGs="
+      "PeliculasCFHN.ClienteBlazor.pdb": "sha256-WZ9y6JTBJtaMZxo\/uL1tK4eOUGYKrvmus90XRHDbl0A="
     },
     "runtime": {
       "dotnet.6.0.3.k4rg04dpep.js": "sha256-pRmcHKZN4T\/YbX9dj6ITT4sNtkJ9w07OLcwl4645nPg=",

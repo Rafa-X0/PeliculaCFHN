@@ -2,11 +2,18 @@
 @page "/peliculas"
 @using  Models
 @using Services
+@using System.Text.Json
 @inject IPeliculaService PeliculaService
+@inject HttpClient httpClient
+@inject NavigationManager NavigationManager
 
 <MudText Typo="Typo.h4">Peliculas</MudText>
 <br />
-
+<MudTextField @bind-Value="searchText" OnKeyUp="OnSearchKeyUp" Placeholder="Search" Adornment="Adornment.Start" 
+    AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0">
+</MudTextField> 
+<br />
+<br />
 @if(peliculas == null)
 {
     <p>Cargando......</p>
@@ -34,10 +41,44 @@ else
 }
 
 @code {
-    IEnumerable<Pelicula> peliculas = new List<Pelicula>();
+    //IEnumerable<Pelicula> peliculas = new List<Pelicula>();
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    peliculas = await PeliculaService.GetAll();
+    //}
+    private IEnumerable<Pelicula> peliculas = new List<Pelicula>();
+    private string searchText = "";
+    private Pelicula pelicula = new Pelicula();
+
     protected override async Task OnInitializedAsync()
     {
-        peliculas = await PeliculaService.GetAll();
+        await getAll();
     }
 
+    private async Task getAll()
+    {
+        var httpResponse = await httpClient.PostAsJsonAsync("pelicula/buscar", pelicula);
+        string respString = await httpResponse.Content.ReadAsStringAsync();
+        peliculas = JsonSerializer.Deserialize<IEnumerable<Pelicula>>(respString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+    }
+
+    private void goAdd()
+    {
+        NavigationManager.NavigateTo("pelicula/agregar");
+    }
+
+    private async Task OnSearchKeyUp(KeyboardEventArgs e)
+    {
+        if (e.Code == "Enter")
+        {
+            buscarPelicula();
+        }
+    }
+
+    private async Task buscarPelicula()
+    {
+        var httpResponse = await httpClient.PostAsJsonAsync($"pelicula/buscar", new Pelicula { Titulo = searchText});
+        string respString = await httpResponse.Content.ReadAsStringAsync();
+        peliculas = JsonSerializer.Deserialize<IEnumerable<Pelicula>>(respString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+    }
 }
